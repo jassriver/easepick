@@ -1,0 +1,51 @@
+.container.preset-plugin main {
+  display: grid;
+}
+.container.preset-plugin main.preset-left > .calendars, .container.preset-plugin main.preset-top > .calendars {
+  order: 2;
+}
+.container.preset-plugin main.preset-left > .preset-plugin-container, .container.preset-plugin main.preset-top > .preset-plugin-container {
+  order: 1;
+}
+.container.preset-plugin main.preset-left, .container.preset-plugin main.preset-right {
+  grid-template-columns: auto auto;
+}
+.container.preset-plugin main.preset-left .preset-plugin-container, .container.preset-plugin main.preset-right .preset-plugin-container {
+  width: 130px;
+  grid-row: span 2;
+}
+.container.preset-plugin main.preset-bottom > .preset-plugin-container {
+  order: 4;
+}
+.container.preset-plugin main.preset-top, .container.preset-plugin main.preset-bottom {
+  grid-template-columns: auto;
+}
+.container.preset-plugin main > .time-plugin-container {
+  order: 3;
+}
+
+.container > main:not([class*=preset-]) {
+  flex-direction: column;
+}
+
+.time-plugin-container {
+  background-color: var(--color-bg-secondary);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--color-border-default);
+}
+.time-plugin-container input[type=time] {
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: var(--color-fg-default);
+  background-color: var(--color-bg-default);
+}
+.time-plugin-container select {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: var(--color-fg-default);
+  background-color: var(--color-bg-default);
+  margin: 0 3px;
+}

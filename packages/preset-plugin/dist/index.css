@@ -1,0 +1,41 @@
+.container.preset-plugin > main {
+  display: flex;
+}
+.container.preset-plugin > main.preset-left {
+  flex-direction: row-reverse;
+}
+.container.preset-plugin > main.preset-right {
+  flex-direction: row;
+}
+.container.preset-plugin > main.preset-left .preset-plugin-container, .container.preset-plugin > main.preset-right .preset-plugin-container {
+  width: 130px;
+  flex-direction: column;
+}
+.container.preset-plugin > main.preset-top {
+  flex-direction: column-reverse;
+}
+.container.preset-plugin > main.preset-bottom {
+  flex-direction: column;
+}
+.container.preset-plugin > main.preset-top .preset-plugin-container, .container.preset-plugin > main.preset-bottom .preset-plugin-container {
+  flex-direction: row;
+}
+
+.preset-plugin-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-bg-secondary);
+  padding: 10px;
+}
+.preset-plugin-container > button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: var(--color-bg-default);
+  color: var(--color-fg-default);
+}
+.preset-plugin-container > button:hover {
+  color: var(--color-fg-primary);
+  border: 1px solid var(--color-fg-primary);
+  cursor: pointer;
+}
